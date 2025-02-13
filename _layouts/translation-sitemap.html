@@ -1,3 +1,5 @@
+<!DOCTYPE html><html><body>
+{%- comment -%}
 {%- assign pagelang = 'en' -%}
 {%- if page.lang -%}
   {%- assign pagelang = page.lang -%}
@@ -51,7 +53,7 @@
   {% endif %}
 
   <main id="main"{% if page.lang %} lang="{{page.lang}}"{% endif %}>
-
+{%- endcomment -%}
     {% comment %}
 
        Header will be displayed in three ways, depending on which frontmatter was provided:
@@ -61,6 +63,7 @@
        - just the title (if neither are provided)
 
      {% endcomment %}
+{%- comment -%}
 
     {% if page.resource.ref %}
     <header class="in-resource">
@@ -236,6 +239,6 @@
 </div>
 
 {% include footer.html lang=pagelang %}
-
+{%- endcomment -%}
   </body>
 </html>
